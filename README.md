@@ -29,8 +29,8 @@ This chart is heavily influenced by Bitnami charts best practices.
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm repo add springboard https://helm-charts.springboardvr.com
-$ helm install my-release springboard/typesense -n [namespace]
+$ helm repo add xentypesense https://utkarsha2016.github.io/typesense-helm
+$ helm install my-release xentypesense/typesense -n [namespace]
 ```
 
 These commands deploy Typesense on the Kubernetes cluster in the default configuration. The [Parameters](#parameters) section lists the parameters that can be configured during installation.
