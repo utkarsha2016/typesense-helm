@@ -5,7 +5,7 @@
 ## TL;DR;
 
 ```console
-$ helm repo add xentypesense https://utkarsh2016.github.io/typesense-helm
+$ helm repo add xentypesense https://utkarsha2016.github.io/typesense-helm
 $ helm install my-release xentypesense/typesense -n [namespace]
 ```
 
