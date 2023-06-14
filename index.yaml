@@ -2,10 +2,10 @@ apiVersion: v1
 entries:
   typesense:
   - apiVersion: v2
-    created: "2023-06-14T23:14:25.976661+08:00"
+    created: "2023-06-14T23:58:24.255548+08:00"
     description: Typesense is an open source, typo tolerant search engine that delivers
       fast and relevant results out-of-the-box.
-    digest: ce637500580db9d96ca964e788bf72b92ab44b5a2dd74d3989f96fc79b1db458
+    digest: 5be46212949ec44d3528206aec96cc8a55791251bb7fcd0f3d8cfcfe06285b40
     home: https://typesense.org/
     icon: https://typesense.org/assets/images/typesense_medium.png
     keywords:
@@ -19,4 +19,4 @@ entries:
     urls:
     - typesense-1.0.0.tgz
     version: 1.0.0
-generated: "2023-06-14T23:14:25.974293+08:00"
+generated: "2023-06-14T23:58:24.253856+08:00"
