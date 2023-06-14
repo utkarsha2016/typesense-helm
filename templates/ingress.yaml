@@ -1,0 +1,34 @@
+{{- if .Values.ingress.enabled }}
+{{- range .Values.ingress.hosts }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ template "typesense.fullname" $ }}
+  labels: {{- include "typesense.labels" $ | nindent 4 }}
+  annotations:
+    {{- if .certManager }}
+    kubernetes.io/tls-acme: "true"
+    {{- end }}
+    {{- range $key, $value := .annotations }}
+    {{ $key }}: {{ $value | quote }}
+    {{- end }}
+spec:
+  rules:
+    - host: {{ .name }}
+      http:
+        paths:
+          - path: {{ default "/" .path }}
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ template "typesense.fullname" $ }}
+                port:
+                  number: 80
+  {{- if .tls }}
+  tls:
+    - hosts:
+        - {{ .name }}
+      secretName: {{ .tlsSecret }}
+  {{- end }}
+{{- end }}
+{{- end }}
